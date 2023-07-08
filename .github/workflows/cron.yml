@@ -1,0 +1,35 @@
+name: Script cron
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: bash script.sh
+
+      - name: Upload user.csv
+        uses: actions/download-artifact@v2.1.1
+        with:
+          name: user.csv
+          path: ./user.csv
+
+      - name: Upload user_wo_diacritics.csv
+        uses: actions/download-artifact@v2.1.1
+        with:
+          name: user_wo_diacritics.csv
+          path: ./user_wo_diacritics.csv
+          
+      - name: Upload user_PL_wo_diacritics.csv
+        uses: actions/download-artifact@v2.1.1
+        with:
+          name: user_PL_wo_diacritics.csv
+          path: ./user_PL_wo_diacritics.csv
