@@ -4,7 +4,7 @@ echo "Cleanup"
 rm -rf user*.csv
 
 echo "Download the latest user database"
-curl -s -o user.csv https://radioid.net/static/user.csv
+wget -O user.csv https://radioid.net/static/user.csv
 
 echo "Replacing of diacritics"
 iconv -f UTF8 -t ASCII//IGNORE//TRANSLIT user.csv >  user_wo_diacritics.csv

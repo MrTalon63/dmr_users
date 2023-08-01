@@ -1,27 +1,27 @@
 name: Script cron
 
 on:
-  schedule:
-    - cron: '0 */12 * * *'
+    schedule:
+        - cron: "0 */12 * * *"
 
-  workflow_dispatch:
+    workflow_dispatch:
 
 jobs:
-  update:
-    runs-on: ubuntu-latest
+    update:
+        runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
+        steps:
+            - uses: actions/checkout@v3
 
-      - name: Run the script
-        run: bash script.sh
-        
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: databases/
+            - name: Run the script
+              run: bash script.sh
 
-      - name: Upload user.csv
-        uses: actions/download-artifact@v2.1.1
-        with:
-          name: databases
-          path: databases/
+            - name: Display structure of downloaded files
+              run: ls -R
+              working-directory: databases/
+
+            - name: Upload user.csv
+              uses: actions/download-artifact@v3
+              with:
+                  name: databases
+                  path: databases/
