@@ -2,7 +2,7 @@
 
 DMR users without diacritics
 
-## Latest update of the database can be downloaded [here](https://github.com/MrTalon63/dmr_users/actions/workflows/cron.yml). Click on the latest run and download the artifact.
+### Latest update of the database can be downloaded [here](https://github.com/MrTalon63/dmr_users/actions/workflows/cron.yml). Click on the latest run and download the artifact.
 
 ## Source database
 

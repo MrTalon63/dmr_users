@@ -16,11 +16,19 @@ jobs:
             - name: Run the script
               run: bash script.sh
 
-            - name: Display structure of downloaded files
-              run: ls -R
-              working-directory: databases
-
             - name: Upload files
               uses: actions/upload-artifact@v2
               with:
                   path: databases
+
+            - name: Update release
+              uses: IsaacShelton/update-existing-release@v1.3.2
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  release: latest
+                  tag: latest
+                  replace: true
+                  files: >
+                      databases/user.csv
+                      databases/user_wo_diacritics.csv
+                      databases/user_PL_wo_diacritics.csv
