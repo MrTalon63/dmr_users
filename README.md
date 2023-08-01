@@ -1,8 +1,6 @@
 # dmr_users
 
-DMR users without diacritics
-
-### Latest update of the database can be downloaded [here](https://github.com/MrTalon63/dmr_users/actions/workflows/cron.yml). Click on the latest run and download the artifact.
+#### DMR users without diacritics. This is a fork of [walczakkamil/dmr_users](https://github.com/walczakkamil/dmr_users) with Github Actions to automate the process. The database is updated every 12h (so at 00:00 and 12:00 UTC). You can download latest version [here](https://github.com/MrTalon63/dmr_users/releases/tag/latest)
 
 ## Source database
 
@@ -16,11 +14,10 @@ DMR users without diacritics
 | [user_wo_diacritics.csv][global] | Global without diacritics          |
 | [user_PL_wo_diacritics.csv][pl]  | Polish Stations without diacritics |
 
-[source]: https://github.com/walczakkamil/dmr_users/blob/main/user.csv
-[global]: https://github.com/walczakkamil/dmr_users/blob/main/user_wo_diacritics.csv
-[pl]: https://github.com/walczakkamil/dmr_users/blob/main/user_PL_wo_diacritics.csv
+[source]: https://github.com/MrTalon63/dmr_users/releases/download/latest/user.csv
+[global]: https://github.com/MrTalon63/dmr_users/releases/download/latest/user_wo_diacritics.csv
+[pl]: https://github.com/MrTalon63/dmr_users/releases/download/latest/user_PL_wo_diacritics.csv
 
-## author
+## author(s)
 
-SP7FM
-Eventually automated by SP0KS
+SP7FM and eventually automated by SP0KS
