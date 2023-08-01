@@ -23,5 +23,4 @@ jobs:
             - name: Upload user.csv
               uses: actions/download-artifact@v3
               with:
-                  name: databases
                   path: databases
