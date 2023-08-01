@@ -18,9 +18,7 @@ jobs:
 
             - name: Display structure of downloaded files
               run: ls -R
-              working-directory: /databases
+              working-directory: databases
 
-            - name: Upload user.csv
+            - name: Upload CSVs to GitHub
               uses: actions/download-artifact@v3
-              with:
-                  path: /databases
