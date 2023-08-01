@@ -18,10 +18,10 @@ jobs:
 
             - name: Display structure of downloaded files
               run: ls -R
-              working-directory: databases/
+              working-directory: databases
 
             - name: Upload user.csv
               uses: actions/download-artifact@v3
               with:
                   name: databases
-                  path: databases/
+                  path: databases
