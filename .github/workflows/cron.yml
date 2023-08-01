@@ -20,17 +20,8 @@ jobs:
               run: ls -R
               working-directory: databases
 
-            - name: Upload user.csv
-              uses: actions/download-artifact@v3
+            - name: Upload files
+              uses: actions/upload-artifact@v2
               with:
-                  name: user.csv
-
-            - name: Upload user_wo_diacritics.csv
-              uses: actions/download-artifact@v3
-              with:
-                  name: user_wo_diacritics.csv
-
-            - name: Upload user_PL_wo_diacritics.csv
-              uses: actions/download-artifact@v3
-              with:
-                  name: user_PL_wo_diacritics.csv
+                  name: databases
+                  path: databases
